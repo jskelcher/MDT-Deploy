@@ -1,0 +1,1 @@
+﻿$ComputerName = "$env:computername"
