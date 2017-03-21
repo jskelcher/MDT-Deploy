@@ -24,6 +24,18 @@ Function Test-HyperV(){
     Write-Host "Hyper-V [OK]"
     }
 }
+
+Function Test-ADK(){
+    .\prerequisites\adksetup.exe /quiet /features OptionId.DeploymentTools OptionId.WindowsPreinstallationEnvironment OptionId.UserStateMigrationTool /ceip off
+    Write-Host "ADK [OK]"
+}
+
+Function Test-MDT(){
+    .\prerequisites\MicrosoftDeploymentToolkit_x64.msi /quiet /norestart
+    Write-Host "MDT [OK]"
+}
 #Test-Admin
 Test-Powershell
 Test-HyperV
+Test-ADK
+Test-MDT
