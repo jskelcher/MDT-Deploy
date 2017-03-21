@@ -1,0 +1,3 @@
+﻿Write-Host Creating Reference Image VM...
+New-VM -Name "RefImg" -MemoryStartupBytes 2048MB -SwitchName ExternalSwitch -NewVHDPath C:\VHD\RefImg.vhdx -NewVHDSizeBytes 60GB -BootDevice CD
+Write-Host "Complete"
